@@ -1,0 +1,10 @@
+INFO  [2017-05-23 22:52:20,265] core.DeltaTest:38 - [TestCase0]: Start test case from file: 2000w.xml 
+INFO  [2017-05-23 22:52:20,280] core.ConfigReader:32 - [ConfigResolve]: Resolve database config from file: src/main/resources/2000w.xml 
+INFO  [2017-05-23 22:52:20,500] core.ConfigReader:171 - [ConfigResolve]: Database configs resolve is finished. Total: 0 actions. 
+INFO  [2017-05-23 22:52:20,510] core.ConfigReader:199 - [ConfigResolve]: Action configs resolve is finished. Total: 3 actions. 
+INFO  [2017-05-23 22:52:20,532] core.TestCase:109 - [ActionStarts]:  Action ID: 0 
+INFO  [2017-05-23 22:52:42,371] core.DeltaTest:38 - [TestCase0]: Start test case from file: 2000w.xml 
+INFO  [2017-05-23 22:52:42,392] core.ConfigReader:32 - [ConfigResolve]: Resolve database config from file: src/main/resources/2000w.xml 
+INFO  [2017-05-23 22:52:42,620] core.ConfigReader:171 - [ConfigResolve]: Database configs resolve is finished. Total: 0 actions. 
+INFO  [2017-05-23 22:52:42,628] core.ConfigReader:199 - [ConfigResolve]: Action configs resolve is finished. Total: 3 actions. 
+INFO  [2017-05-23 22:52:42,636] core.TestCase:109 - [ActionStarts]:  Action ID: 0 

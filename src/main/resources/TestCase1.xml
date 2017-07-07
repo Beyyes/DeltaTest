@@ -1,0 +1,124 @@
+<config>
+	<!-- 数据库连接 -->
+	<connection>
+		<DB id="1">
+			<type>tsfile</type>
+			<class>
+				com.corp.tsfile.jdbc.TsfileDriver
+			</class>
+			<ip>127.0.0.1</ip>
+			<port>6667</port>
+			<schema></schema>
+			<username>root</username>
+			<password>root</password>
+		</DB>
+	</connection>
+
+	<!-- 有几个线程 -->
+	<threads num="1">
+
+		<!-- 准备工作（清除数据、建立新表等） thread-id属性必须从零开始，逐一递增 -->
+		<!-- 注： -->
+ 		<!-- <thread id="0" operation="prepare" desc="thread description">
+			数据库1要执行的语句 db值需要与前面对应；目前的tsfile-jdbc不支持SQL语句写分号
+			<statements db="1">
+				
+				<statement>
+					delete timeseries root.vehicle.d0.s0
+				</statement>
+				<statement>
+					delete timeseries root.vehicle.d0.s1
+				</statement>
+				<statement>
+					delete timeseries root.vehicle.d0.s2
+				</statement>
+				<statement>
+					delete timeseries root.vehicle.d0.s3
+				</statement>
+				<statement>
+					delete timeseries root.vehicle.d1.s0
+				</statement>
+				<statement>
+					delete timeseries root.vehicle.d1.s1
+				</statement>
+				<statement>
+					delete timeseries root.vehicle.d1.s2
+				</statement>
+				<statement>
+					delete timeseries root.vehicle.d1.s3
+				</statement>
+				<statement>
+					delete timeseries root.vehicle.d2.s0
+				</statement>
+				<statement>
+					delete timeseries root.vehicle.d2.s1
+				</statement>
+				<statement>
+					delete timeseries root.vehicle.d2.s2
+				</statement>
+				<statement>
+					delete timeseries root.vehicle.d2.s3
+				</statement>
+				<statement>
+					create timeseries root.vehicle.d0.s0 with datatype=INT32,encoding=RLE
+				</statement>
+				<statement>
+					create timeseries root.vehicle.d0.s1 with datatype=INT64,encoding=RLE
+				</statement>
+				<statement>
+					create timeseries root.vehicle.d0.s2 with datatype=FLOAT,encoding=RLE
+				</statement>
+				<statement>
+					create timeseries root.vehicle.d0.s3 with datatype=INT64,encoding=RLE
+				</statement>
+				<statement>
+					create timeseries root.vehicle.d1.s0 with datatype=INT32,encoding=RLE
+				</statement>
+				<statement>
+					create timeseries root.vehicle.d1.s2 with datatype=FLOAT,encoding=RLE
+				</statement>
+				<statement>
+					create timeseries root.vehicle.d1.s1 with datatype=INT64,encoding=RLE
+				</statement>
+				<statement>
+					create timeseries root.vehicle.d1.s3 with datatype=INT64,encoding=RLE
+				</statement>
+				<statement>
+					create timeseries root.vehicle.d2.s0 with datatype=INT32,encoding=RLE
+				</statement>
+				<statement>
+					create timeseries root.vehicle.d2.s2 with datatype=FLOAT,encoding=RLE
+				</statement>
+				<statement>
+					create timeseries root.vehicle.d2.s1 with datatype=INT64,encoding=RLE
+				</statement>
+				<statement>
+					create timeseries root.vehicle.d2.s3 with datatype=INT64,encoding=RLE
+				</statement>
+				<statement>
+					set storage group to root.vehicle.d0
+				</statement>
+			</statements>
+		</thread> -->
+
+		<!-- insert操作格式样例 -->
+		<thread id="0" operation="insert" desc="thread description">
+			<!-- 延迟执行时间(单位：秒) -->
+			<delay>0</delay>
+			<!-- 需要等待的其他进程id 用英文逗号分隔 -->
+			<prethread></prethread>
+			<!-- 插入的数据文件路径 csv格式 -->
+			<filePath>/Users/beyyes/Desktop/vehicle-2000w.csv</filePath>
+		</thread>
+
+		
+		<!-- read操作格式样例 -->
+		<!-- <thread id="2" operation="read" desc="thread description">
+			<delay>5</delay>
+			<prethread>0</prethread>
+			<statement db="1">
+				select s1 from root.vehicle.d1
+			</statement>
+		</thread> -->
+	</threads>
+</config>
